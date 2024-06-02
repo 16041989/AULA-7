@@ -1,0 +1,174 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+li{
+    list-style: none;
+}
+
+nav>ul {
+    font-size: 40px;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin: 10px 0;
+
+}
+
+/*PSEUDOCLASES*/
+
+a:link{
+    color: red;
+}
+
+a:visited{
+    color: gray;
+}
+
+a:hover{
+    color: blue;
+}
+
+a:active{
+    color: green;
+}
+
+ul>li:last-child>a{
+
+    color:violet
+}
+
+/*PSEUDOELEMENTOS*/
+
+h1::after{
+    content: "PSEUDOELEMENTOS";
+}
+
+a::after{
+    content: "⏬";
+}
+
+p{
+    margin: 40px 5px;
+    font-size: 25px;
+    font-weight: lighter;
+}
+
+p::selection{
+    background-color: red;
+    color: white;
+}
+
+form>input[type=text] {
+width: 300px;
+height: 40px;
+font-size: 20px;
+
+}
+
+form>input[type=text]::placeholder{
+    background-color: red;
+    color: white;
+}
+
+/*ANIMACIONES Y TRANSCICIONES*/
+
+@keyframes mover{
+    0% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(300px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.box{
+    margin: 0;
+    width: 200px;
+    height: 200px;
+    background-color: green;
+    animation-name: mover;
+    animation-duration: 2s;
+    animation-iteration-count: 4;
+}
+
+h1 {
+    color: red;
+    transition: color 1s ease-in-out;
+}
+
+h1:hover {
+    color: green;
+}
+
+.product-card {
+    margin: 100px;
+    background-color: #EEEFF1;
+    width: 400px;
+    height: 600px;
+    font-size: 28px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    
+    border-radius: 15px;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.616);
+
+}
+
+@keyframes giro {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+
+}
+
+.card-img {
+    width: 150px;
+    margin-bottom: 50px;
+    animation: giro 2s;
+
+}
+
+.product-card button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+.product-card button:hover {
+    background-color: #45A049;
+}
+
+.product-card .price {
+    color: #a40000;
+    
+}
+
+.product-card h3 {
+    position: relative;
+    display: inline-block;
+}
+
+.product-card h3:hover {
+    cursor: crosshair;
+}
+
+.product-card .price::before {
+    content: "$ ";
+}
+
