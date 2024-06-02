@@ -1,0 +1,77 @@
+/*BOX MODEL*/
+.container {
+    background-color: aqua;
+    /*CONTENIDO*/
+    /*ANCHO DEL CONTENIDO*/
+    width:fit-content;
+    /*ALTO DEL CONTENIDO*/
+    height: 200px;
+
+    /*PADDING RELLENO*/
+    padding: 10px;
+    /*PADDING A LA IZQUIERDA*/
+    padding-left: 100px;
+    /*PADDING A LA DERECHA*/
+    padding-right: 50px;
+    /*PADDING ARRIBA*/
+    padding-top: 20px;
+    /*PADDING ABAJO*/
+    padding-bottom: 30px;
+    /*FORMA RAPIDA DE COLOCAR PADDINGS*/
+    /*PRIMER VALOR PARA ARRIBA/ABAJO Y EL SEGUNDO PARA IZQUIERDA/DERECHA*/
+    padding: 50px 10px;
+    /*VALORES EN EL SENTIDO DE LAS AGUJAS DEL RELOJ, COMENZANDO POR EL TOP*/
+    padding: 40px 20px 80px 30px;
+
+    /*BORDER*/
+    /*TAMAÑO DE BORDE*/
+    border-width: 10px;
+    /*COLOR DEL BORDE*/
+    border-color: blueviolet;
+    /*ESTILO (SOLID, DASHED, DOUBLE, DOTTED, ETC)*/
+    border-style: solid;
+
+    /*FORMA RAPIDA (TAMBIEN FUNCIONA CON UN LADO ESPECIFICO)*/
+    border: 10px blueviolet solid;
+    /*FORMA RAPIDA ARRIBA*/
+    border-top: 10px blue solid;
+    /*FORMA RAPIDA DERECHA*/
+    border-right: 20px red solid;
+    /*FORMA RAPIDA IZQUIERDA*/
+    border-left: 5px green solid;
+    /*FORMA RAPIDA ABAJO*/
+    border-bottom: 15px yellow solid;
+    
+    /*VALORES DE BORDE DE FORMA RAPIDA*/
+    border-style: dotted dashed solid double;
+    border-width: 5px 10px 8px 20px;
+    /*RADIUS (REDONDEO DEL BORDE)*/
+    border-radius: 20px;
+
+    /*MARGIN SEPARACION*/
+    margin: 100px;
+    /*MARGIN A LA IZQUIERDA*/
+    margin-left: 100px;
+    /*MARGIN A LA DERECHA*/
+    margin-right: 50px;
+    /*MARGIN ARRIBA*/
+    margin-top: 20px;
+    /*MARGIN ABAJO*/
+    margin-bottom: 30px;
+    /*FORMA RAPIDA DE COLOCAR MARGINS*/
+    /*PRIMER VALOR PARA ARRIBA/ABAJO Y EL SEGUNDO VALOR PARA IZQUIERDA/DERECHA*/
+    margin: 30px 10px;
+    /*VALORES EN EL SENTIDO DE LAS AGUJAS DEL RELOJ, COMENZANDO POR EL TOP*/
+    margin: 40px 20px 50px 30px;
+    
+}
+.button {
+    background-color: aqua;
+    border: 1px solid;
+    border-radius: 5px;
+    padding: 10px 20px;
+    color: blue;
+    margin-left: 100px;
+    margin-bottom: 100px;
+
+}

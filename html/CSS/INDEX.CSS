@@ -1,0 +1,42 @@
+/* ESTILOS EN CASCADA */
+h2{
+    color: chocolate;
+    
+}
+
+h2{
+    color: green;
+}
+/* SELECTORES DE ETIQUETAS*/
+h2{
+    color: green;
+}
+
+/*SELECTOR DE CLASE*/
+
+.color_rojo{
+    color: red
+}
+
+.color_azul{
+    color:blue
+}
+
+/*SELECTOR DE ID*/
+#textoConId{
+    color:blueviolet
+}
+/*gerarquia de los selectores*/
+/*de mayor a menor*/
+/*id*/
+#tituloid{
+    color:blueviolet;
+}
+/*clase*/
+.titulo_clase{
+    color: aqua;
+}
+/*etiqueta*/
+h3{
+    color:red;
+}

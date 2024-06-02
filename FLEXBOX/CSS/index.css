@@ -1,0 +1,112 @@
+/*seleccionamos todas las etiquetas y le quitamos el margin y padding por defecto*/
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    /*activar contenedor flexible en linea*/
+    display: inline-flex;
+    /*activar contenedor flexible en bloque*/
+    display:flex;
+    
+
+    /*column: columna*/
+    flex-direction:column;
+    /*row reverse: fila a la inversa */
+    flex-direction: row-reverse;
+    /*column reverse: columna a la inversa*/
+    flex-direction: column-reverse;
+    /*row: fila (por defecto una vez colocado display flex) */
+    flex-direction:row;
+
+    /*justify content (organiza los elementos en horizontal cuando es row/ row reverse y vertical cuando es column y column reverse)*/
+    /*principio (por defecto)*/
+    justify-content: flex-start;
+    /*final*/
+    justify-content: flex-end;
+    /*center*/
+    justify-content: center;
+    /*espacio entre las etiquetas*/
+    justify-content: space-between;
+    /*espacio entre las etiquetas y mitad de ese espacio a la derecha e izquierda*/
+    justify-content: space-around;
+    /*espacio equitativo entre etiquetas*/
+    justify-content: space-evenly;
+
+    /*align-items*/
+    /*organiza los items en horizontal cuando es row/ row reverse y vertical cuando es column/ column reverse*/
+    /*se estiran los items al maximo posible*/
+    align-items: stretch;
+    /*principio*/
+    align-items: flex-start;
+    /*final*/
+    align-items: flex-end;
+    /*centro*/
+    align-items: center;
+
+    height: 600px;
+    background-color: #f0a7a7;
+
+    /*flex-wrap*/
+    /*nowrap: por defecto (no genera un salto de linea)*/
+    flex-wrap: nowrap;
+    /*wrap reverse: se genera un salto de linea para arriba*/
+    flex-wrap: wrap-reverse;
+    /*wrap: genera un salto de linea para abajo*/
+    flex-wrap: wrap;
+
+    /*align-content (organiza los elementos en multiples lineas)*/
+    /*se estiran los items al maximo posible*/
+    align-content: stretch;
+    /*flex-start*/
+    align-content: flex-start;
+    /*flex-end*/
+    align-content: flex-end;
+    /*center*/
+    align-content: center;
+    /*space-between*/
+    align-content: space-between;
+    /*space-around*/
+    align-content: space-around;
+    /*space-evenly*/
+    align-content: space-evenly;
+
+
+}
+
+h3 {
+    padding: 0 20px;
+    background-color: green;
+
+}
+
+.container-2 {
+    margin: 200px 0;
+    display: flex;
+    height: 300px;
+    align-items: center;
+    flex-direction: column;
+    
+}
+
+.texto-1 {
+    background-color: red;
+    flex-grow: 1;
+    order: 3;
+
+}
+
+.texto-2 {
+    background-color: blue;
+    flex-grow: 2;
+    order: 1;
+
+}
+
+.texto-3 {
+    background-color: green;
+    flex-grow: 1;
+    order: 2;
+
+}
