@@ -67,3 +67,23 @@ let verduras = ["lechuga","papa","tomate", "zanahoria"]
 let result = verduras.slice(1,3)
 console.log("las verduras selccionadas son: ", result)
 
+console.log("--------REVERSE()--------")
+
+verduras.reverse()
+console.log(verduras)
+
+console.log("------CONCAT()--------")
+
+let comidas = ["arroz", "pollo", "pescado"]
+let bebidas = ["agua", "cafe", "te"]
+let unidos = comidas.concat(bebidas)
+console.log("los elementos unidos son ", unidos)
+
+console.log("------SORT()------")
+
+let desordenados = [3, 2, 1, 5, 4]
+desordenados.sort()
+console.log("los elementos desordenados son: ", desordenados)
+
+
+
