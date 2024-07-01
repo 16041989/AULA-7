@@ -39,7 +39,7 @@ function mostrarVariable(){
 
 }
 
-  mostrarVariables()
+  mostrarVariable()
 // console.log("estoy fuera de la funcion, ", variableGlobal)
 
 
@@ -48,14 +48,37 @@ function mostrarVariable(){
 //MODO 1: SIN PARENTESIS ES APLICABLE A CUANDO USAMOS MAS DE UN PARAMETRO
 
 const multiplicar = a => a * a
-console.log("multiplicar"(2))
+console.log(multiplicar(2))
 
 //MODO 2: CON PARENTESIS ES APLICABLE A CUANDO USAMOS MAS DE UN PARAMETRO
 
-const mulltiplicar2 = (a, b) => a * b
-console.log("multiplicar2"(2, 3))
+const multiplicar2 = (a, b) => a * b
+console.log(multiplicar2(2, 3))
 
 //MODO 3: PARA DEVOLVER UN VALOR
 
 const saludar2 = nombre => console.log("hola", nombre)
-saludar2(Martin)
+saludar2("Martin")
+
+
+// CALLBACK
+// DEFINIMOS NUESTRA FUNCION CALLBACK
+
+function mostrarResultado(resultado){
+    console.log("Resultado: ", resultado)
+}
+
+// DEFINIMOS NUESTRA FUNCION 
+
+function procesarDatos(datos, callback){
+    // PROCESAMOS LOS DATOS
+    const resultado = datos.map(dato => dato *2)
+    //LLAMAMOS NUESTRA FUNCION CALLBACK
+    callback(resultado)
+}
+
+// ARRAY DE DATOS
+
+const datos = [1, 2, 3, 4, 5]
+
+procesarDatos(datos, mostrarResultado)
