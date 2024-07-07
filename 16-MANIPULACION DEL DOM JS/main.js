@@ -16,22 +16,58 @@ let alumnos =[
 ];
 
 
-const tableBody = document.querySelector(".tableBody")
+const tableBody = document.querySelector(".table-body")
 
-let datos = ' '
+const pintarHtml =(alumnos) => {
 
-for(let i = 0; i < alumnos.length; i++){
-   // console.log(alumnos[i])
-    let alumno = alumnos[i]
+    let datos = ' '
 
-    datos += `  <tr>
-                    <td>${alumno.nombre}</td>
-                    <td>${alumno.edad}</td>
-                    <td>${alumno.curso}</td>
-                    <td>${alumno.promedio}</td>
-                </tr>`
-    // console.log(datos)
+    for(let i = 0; i < alumnos.length; i++){
+       // console.log(alumnos[i])
+        let alumno = alumnos[i]
+    
+        datos += `  <tr>
+                        <td>${alumno.nombre}</td>
+                        <td>${alumno.edad}</td>
+                        <td>${alumno.curso}</td>
+                        <td>${alumno.promedio}</td>
+                    </tr>`
+        // console.log(datos)
+    }
+    tableBody.innerHTML = datos
+
 }
-tableBody.innerHTML = datos
 
+pintarHtml(alumnos)
+
+const boton = document.querySelector(".boton")
+boton.addEventListener('click', ()=> {
+    pintarHtml(alumnos)
+})
+
+
+const productos = [
+    {Nombre: "Monitor 27 pulgadas", precio: 500},
+    {Nombre: "Televisor de 50 pulgadas", precio: 700},
+    {Nombre: "Tablet", precio: 300},
+    {Nombre: "Audifonos", precio: 200},
+    {Nombre: "Teclado", precio: 50},
+    {Nombre: "Celular", precio: 500},
+
+]
+
+const cards = document.querySelector(".container")
+let producto = ""
+
+for(let producto of productos){
+    console.log(producto)
+
+     producto = <div>
+
+        <h3>${producto.nombre}</h3>
+        <p>${producto.precio}</p>
+
+     </div>
+     cards.innerHTML += producto
+}
 
