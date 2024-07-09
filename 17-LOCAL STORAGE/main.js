@@ -8,6 +8,8 @@ const tabla = document.querySelector('.tabla-usuarios')
 
 // let arrayUsuarios = []
 
+cargarYMostrarUsuarios()
+
 form.addEventListener('submit', function(event) {
         
         event.preventDefault()   
@@ -21,15 +23,36 @@ form.addEventListener('submit', function(event) {
        // arrayUsuarios.push(usuariosObjeto)
        // console.log(arrayUsuarios)
 
+       mostrarUsuarios(usuariosObjeto)
+
        guardarUsuarios(usuariosObjeto)
+
+       form.reset()
+
 })
 
 function mostrarUsuarios(usuariosObjeto){
 
-        tabla.innerHTML += `<tr>`
+        tabla.innerHTML += `<tr>
+                                 <td>${usuariosObjeto.nombre}</td>
+                                 <td>${usuariosObjeto.email}</td>
+                          </tr>`
 }
 
 function guardarUsuarios(usuariosObjeto){
+        let usuarios = JSON.parse(localStorage.getItem("usuarios"))
+        usuarios.push(usuariosObjeto)
 
-        localStorage.setItem("usuarios", JSON.stringify(usuariosObjeto))
+        localStorage.setItem("usuarios", JSON.stringify(usuarios))
+}
+
+function cargarYMostrarUsuarios(){
+        if(localStorage.getItem("usuarios") === null){
+                localStorage.setItem('usuarios', JSON.stringify([]))
+        }
+
+        let usuarios = JSON.parse(localStorage.getItem("usuarios"))
+        for(let usuario of usuarios){
+                mostrarUsuarios(usuario)
+        }
 }
