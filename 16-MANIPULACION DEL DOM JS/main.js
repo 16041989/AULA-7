@@ -47,12 +47,12 @@ boton.addEventListener('click', ()=> {
 
 
 const productos = [
-    {Nombre: "Monitor 27 pulgadas", precio: 500},
-    {Nombre: "Televisor de 50 pulgadas", precio: 700},
-    {Nombre: "Tablet", precio: 300},
-    {Nombre: "Audifonos", precio: 200},
-    {Nombre: "Teclado", precio: 50},
-    {Nombre: "Celular", precio: 500},
+    {nombre: "Monitor 27 pulgadas", precio: 500},
+    {nombre: "Televisor de 50 pulgadas", precio: 700},
+    {nombre: "Tablet", precio: 300},
+    {nombre: "Audifonos", precio: 200},
+    {nombre: "Teclado", precio: 50},
+    {nombre: "Celular", precio: 500},
 
 ]
 
@@ -62,12 +62,10 @@ let producto = ""
 for(let producto of productos){
     console.log(producto)
 
-     producto = <div>
-
-        <h3>${producto.nombre}</h3>
-        <p>${producto.precio}</p>
-
-     </div>
+     producto = `<div>
+                     <h3>${producto.nombre}</h3>
+                      <p>${producto.precio}</p> 
+                 </div>`
      cards.innerHTML += producto
 }
 
