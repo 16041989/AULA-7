@@ -1,59 +1,50 @@
-// CALLBACK ES UNA FUNCION QUE SE PASA COMO ARGUMENTO A OTRA FUNCION
+// const titulo = document.createElement("p")
+// const container = document.querySelector(".container")
 
-// function mayusculas(palabra, callback) {
-   // let palabraRetornada = callback(palabra)
 
-    // console.log(palabraRetornada)
-// }
+// titulo.textContent ='Async'
+// document.body.before(titulo)
 
-// function manipularPalabra(palabra) {
 
-    // return palabra.toUpperCase()
-// }
 
-// mayusculas("hola", manipularPalabra)
 
-let numeros = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-//    i        0  1  2  3  4  5  6  7  8   9
+// let valor = 9 
 
-// for(let i = 0; i < numeros.length; i++) {
-   // console.log(numeros[i])
-// }
+// try {
+  //  console.log(5/valo)
+//} catch (error) {
+  //  console.error(error.mesage)
+//}
 
-// let sumar = numeros.forEach(numero => numero + 1)
-// console.log(sumar)
+//container.innerText = "Cargando..."
 
-// MAP
+//setTimeout(()=> {
+//    container.innerHTML = "<h2>Contenido Cargado</h2>"
+//}, 2000)
 
-const cuadrados = numeros.map(num => num * num)
-console.log(cuadrados)
 
-// FILTER
+function operacionRandom(){
+    return new Promise((resolve, reject) => {
+        setTimeout( () => {
+          const numeroRandom = Math.floor(Math.random() *10)
 
-const pares = numeros.filter(num => num % 2 === 0)
-console.log(pares)
+          if(numeroRandom < 5){
+            resolve(`Exitos ${numeroRandom}`)
+          }else{
+            reject(new Error(`Error ${numeroRandom} no es menor a 5`))
+          }
 
-// REDUCE
-// ACUMULADOR = 0 + VALORACTUAL = 1
-
-const suma = numeros.reduce((acumulador, valorActual) => acumulador + valorActual, 0)
-console.log(suma)
-
-///////OBJETOS
-
-const persona = {
-    nombre:"Juan",
-    apellido:"Perez",
-    edad:20
+        }, 2000)
+    })
 }
 
-console.log(Object.keys(persona))
+async function ejecutarOperacion(){
+    try {
+        const message = await operacionRandom()
+        console.log("Resultado: ", message)
+    } catch (error) {
+        console.error("Error capturado: ",error.message)
+    } 
+}
 
-console.log(Object.values(persona))
-
-console.log(Object.entries(persona))
-
-const obj1 = { a:1, b:2 }
-const obj2 = { c:3, d:4 }
-
-console.log(Object.assign(obj1, obj2))
+ejecutarOperacion()
