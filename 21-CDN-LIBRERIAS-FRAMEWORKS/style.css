@@ -1,5 +1,9 @@
-.blue {
+* {
     font-family: Arial, Helvetica, sans-serif;
+}
+
+.blue {
+    
     color: blue;
     font-size: 50px;
 }
@@ -9,4 +13,41 @@
     width: 200px;
     height: 200px;
     background-color: lightblue;
+}
+
+#wrapper {
+    width: 50%;
+    background-color: #f77b7b;
+    padding: 10px;
+    border-radius: 8px;
+    margin: 20px auto;
+}
+
+.gridjs-th-content{
+    color: #008026;
+    font-size: 20px;
+}
+
+#btn-alert{
+    border:none;
+    background-color: #8b1818;
+    color:white;
+    padding: 10px 20px;
+    font-size: 25px;
+    border-radius: 8px;
+}
+
+#btn-alert:hover{
+    cursor: pointer;
+    background-color: #9c3939;
+}
+
+.custom-btn{
+    background-color: #72b65d;
+}
+
+.container-chart{
+    width: 50%;
+    margin: auto;
+    
 }
